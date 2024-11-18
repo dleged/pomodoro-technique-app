@@ -2,7 +2,10 @@
 
 A modern, cross-platform desktop application for time management using the Pomodoro Technique. Built with Tauri, React, and TypeScript.
 
-![Pomodoro Timer](./screenshots/app.png)
+<p align="center">
+  <img src="./screenshots/app-light.png" width="400" />
+  <img src="./screenshots/app-dark.png" width="400" />
+</p>
 
 ## Features
 
@@ -44,19 +47,19 @@ cd pomodoro-technique-app
 
 2. Install dependencies:
 ```bash
-npm install
+pnpm install
 ```
 
 3. Run in development mode:
 ```bash
-npm run tauri dev
+pnpm run tauri dev
 ```
 
 ### Building
 
 To create a production build:
 ```bash
-npm run tauri build
+pnpm run tauri build
 ```
 
 The built application will be available in the `src-tauri/target/release` directory.

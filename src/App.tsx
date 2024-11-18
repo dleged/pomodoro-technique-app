@@ -2,7 +2,6 @@ import {
   ChakraProvider,
   Box,
   VStack,
-  Heading,
   Text,
   Button,
   HStack,
@@ -71,20 +70,17 @@ function App() {
               position="relative"
             >
               <VStack spacing={4}>
-                <HStack w="full" justify="space-between" mb={2}>
-                  <Heading size="md">Pomodoro Technique</Heading>
-                  <HStack spacing={2}>
-                    <Settings onUpdate={(workTime, shortBreakTime, longBreakTime) => {
-                      updateSettings({ workTime, shortBreakTime, longBreakTime });
-                    }} />
-                    <IconButton
-                      aria-label="Toggle color mode"
-                      icon={colorMode === 'light' ? <FaMoon color="#718096" /> : <FaSun color="#F6E05E" />}
-                      onClick={toggleColorMode}
-                      variant="ghost"
-                      _hover={{ bg: useColorModeValue('gray.100', 'gray.700') }}
-                    />
-                  </HStack>
+                <HStack w="full" justify="flex-end" mb={0} spacing={0}>
+                  <Settings onUpdate={(workTime, shortBreakTime, longBreakTime) => {
+                    updateSettings({ workTime, shortBreakTime, longBreakTime });
+                  }} />
+                  <IconButton
+                    aria-label="Toggle color mode"
+                    icon={colorMode === 'light' ? <FaMoon color="#718096" /> : <FaSun color="#F6E05E" />}
+                    onClick={toggleColorMode}
+                    variant="ghost"
+                    _hover={{ bg: useColorModeValue('gray.100', 'gray.700') }}
+                  />
                 </HStack>
 
                 <Text fontSize="6xl" fontWeight="bold" fontFamily="mono">
@@ -98,10 +94,10 @@ function App() {
                   borderRadius="full"
                 />
                 <Text fontSize="xl" color={mode === 'work' ? 'red.500' : 'green.500'}>
-                  {mode === 'work' ? '✍️ Work Time' : '☕ Break Time'}
+                  {mode === 'work' ? 'Work Time' : 'Break Time'}
                 </Text>
 
-                <HStack spacing={4}>
+                <HStack spacing={4} mt={6}>
                   <Button
                     leftIcon={isActive ? <FaPause /> : <FaPlay />}
                     colorScheme={isActive ? 'orange' : 'blue'}
