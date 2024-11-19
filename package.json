@@ -2,7 +2,7 @@
   "name": "pomodoro-technique-app",
   "description": "A Pomodoro Timer Application",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
