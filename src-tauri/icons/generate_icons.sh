@@ -13,6 +13,9 @@ resize_icon 128 "128x128.png"
 resize_icon 256 "128x128@2x.png"
 resize_icon 512 "icon.png"
 
+# Generate .ico file for Windows
+magick convert base.png -resize 256x256 -define icon:auto-resize=256,128,64,48,32,16 icon.ico
+
 # Generate new icns file
 mkdir -p icon.iconset
 cp "32x32.png" "icon.iconset/icon_16x16@2x.png"

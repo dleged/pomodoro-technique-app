@@ -7,6 +7,10 @@ A modern, cross-platform desktop application for time management using the Pomod
   <img src="./screenshots/app-dark.png" width="400" />
 </p>
 
+## Download App
+
+[![Get it on GitHub](https://img.shields.io/badge/Get%20it%20on-GitHub-green?style=for-the-badge&logo=github)](https://github.com/dleged/pomodoro-technique-app/releases/)
+
 ## Features
 
 - 🎯 Customizable work/break intervals
@@ -92,7 +96,7 @@ pomodoro-technique-app/
 - Customizable long break duration
 - Settings persist between sessions
 
-### Notifications
+### [TODO] Notifications
 - Native system notifications
 - Break start/end alerts
 - Permission handling
@@ -102,13 +106,6 @@ pomodoro-technique-app/
 - Manual theme toggle
 - Consistent styling across themes
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## License
 
