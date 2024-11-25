@@ -1,5 +1,7 @@
 # Pomodoro Technique App
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 A modern, cross-platform desktop application for time management using the Pomodoro Technique. Built with Tauri, React, and TypeScript.
 
 <p align="center">
