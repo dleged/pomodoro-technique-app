@@ -11,7 +11,7 @@
 
 ## 下载应用
 
-[![从 GitHub 获取](https://img.shields.io/badge/从-GitHub-green?style=for-the-badge&logo=github)](https://github.com/dleged/pomodoro-technique-app/releases/)
+[![从 github 下载](https://img.shields.io/badge/Get%20it%20on-GitHub-green?style=for-the-badge&logo=github)](https://github.com/dleged/pomodoro-technique-app/releases/)
 
 ## 功能特点
 
