@@ -9,9 +9,11 @@
   <img src="./screenshots/app-dark.png" width="400" />
 </p>
 
-## 下载应用
+## 📥 下载应用
 
-[![从 github 下载](https://img.shields.io/badge/Get%20it%20on-GitHub-green?style=for-the-badge&logo=github)](https://github.com/dleged/pomodoro-technique-app/releases/)
+### 版本
+
+请根据的操作系统在我们的 [这里下载](https://github.com/dleged/pomodoro-technique-app/releases) 选择适合的版本下载。
 
 ## 功能特点
 

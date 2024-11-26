@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "tauri": "tauri",
     "build-windows": "tauri build --target x86_64-pc-windows-msvc",
-    "build-macos": "tauri build --target x86_64-apple-darwin"
+    "build-macos-intel": "tauri build --target x86_64-apple-darwin",
+    "build-macos-silicon": "tauri build --target aarch64-apple-darwin"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.0",

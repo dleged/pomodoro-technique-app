@@ -6,8 +6,8 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "Pomodoro Technique",
-    "version": "0.1.0"
+    "productName": "Pomodoro Timer",
+    "version": "1.0.0"
   },
   "tauri": {
     "allowlist": {

@@ -9,9 +9,10 @@ A modern, cross-platform desktop application for time management using the Pomod
   <img src="./screenshots/app-dark.png" width="400" />
 </p>
 
-## Download App
+## 📥 Download
 
-[![Download from github](https://img.shields.io/badge/Get%20it%20on-GitHub-green?style=for-the-badge&logo=github)](https://github.com/dleged/pomodoro-technique-app/releases/)
+### Release
+Choose the appropriate version for your operating system from our [download page](https://github.com/dleged/pomodoro-technique-app/releases).
 
 ## Features
 
