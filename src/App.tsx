@@ -15,11 +15,22 @@ import { FaSun, FaMoon, FaPlay, FaPause, FaRedo } from 'react-icons/fa';
 import { Settings } from './components/Settings';
 import { formatTime } from './utils/formatTime';
 import { usePomodoro } from './hooks/usePomodoro';
-import { isPermissionGranted, requestPermission, sendNotification } from '@tauri-apps/plugin-notification';
-
+import { isPermissionGranted, requestPermission, sendNotification, registerActionTypes } from '@tauri-apps/plugin-notification';
+import React from 'react';
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
+
+  React.useEffect(() => {
+    // Register notification action types when component mounts
+    registerActionTypes([{
+      id: 'pomodoro',
+      actions: [{
+        id: 'start-next',
+        title: 'Start Next Session'
+      }]
+    }]);
+  }, []);
 
   const {
     time,
@@ -39,11 +50,11 @@ function App() {
           const permission = await requestPermission();
           permissionGranted = permission === 'granted';
         }
-        debugger;
         if (permissionGranted) {
           await sendNotification({
             title: mode === 'work' ? 'Break Time!' : 'Back to Work!',
-            body: mode === 'work' ? 'Time for a break! Take a moment to relax.' : 'Break is over! Let\'s get back to being productive.'
+            body: mode === 'work' ? 'Time for a break! Take a moment to relax.' : 'Break is over! Let\'s get back to being productive.',
+            actionTypeId: 'start-next',
           });
         }
       } catch (error) {

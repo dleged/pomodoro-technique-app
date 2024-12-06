@@ -18,7 +18,7 @@ import {
   DrawerCloseButton,
   useDisclosure,
 } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaCog } from 'react-icons/fa';
 
 interface SettingsProps {
@@ -31,7 +31,24 @@ export function Settings({ onUpdate }: SettingsProps) {
   const [shortBreakTime, setShortBreakTime] = useState(5);
   const [longBreakTime, setLongBreakTime] = useState(15);
 
+  useEffect(() => {
+    const savedSettings = localStorage.getItem('pomodoroSettings');
+    if (savedSettings) {
+      const { workTime: savedWork, shortBreakTime: savedShort, longBreakTime: savedLong } = JSON.parse(savedSettings);
+      setWorkTime(savedWork);
+      setShortBreakTime(savedShort);
+      setLongBreakTime(savedLong);
+      onUpdate(savedWork, savedShort, savedLong);
+    }
+  }, [onUpdate]);
+
   const handleSave = () => {
+    localStorage.setItem('pomodoroSettings', JSON.stringify({
+      workTime,
+      shortBreakTime,
+      longBreakTime
+    }));
+    
     onUpdate(workTime, shortBreakTime, longBreakTime);
     onClose();
   };
