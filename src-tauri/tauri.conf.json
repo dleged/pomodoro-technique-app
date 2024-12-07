@@ -16,15 +16,7 @@
         "all": true
       },
       "window": {
-        "all": false,
-        "close": true,
-        "hide": true,
-        "show": true,
-        "maximize": true,
-        "minimize": true,
-        "unmaximize": true,
-        "unminimize": true,
-        "startDragging": true
+        "all": true
       }
     },
     "bundle": {
@@ -68,11 +60,16 @@
     "windows": [
       {
         "fullscreen": false,
-        "resizable": false,
+        "height": 430,
+        "resizable": true,
         "title": "Pomodoro Timer",
         "width": 500,
-        "height": 430,
-        "center": true
+        "decorations": true,
+        "transparent": false,
+        "minWidth": 400,
+        "minHeight": 300,
+        "maximizable": false,
+        "maximized": false
       }
     ]
   }
